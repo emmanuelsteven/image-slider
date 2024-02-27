@@ -50,13 +50,22 @@
     </div>
     <div class="navigation-manual">
         <label for="radio1" class="manual-btn"></label>
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
     </div>
 </div>
 <!--image slider end-->
 
-    <script src="app.js"></script>
+    <script type=  "text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter ).checked = true;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        },5000);
+    </script>
 </body>
 </html>

@@ -14,7 +14,7 @@ body {
     width: 800px;
     height:  500px;
     border-radius: 10px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .slides{
      width: 500%;
@@ -73,9 +73,40 @@ body {
  #radio4:checked ~ .first {
     margin-left: -60%;
  }
+/* automatic navigation  */
 
+.navigation-auto{
+    position:absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px; 
 
- 
+}
+
+.navigation-auto div {
+    border: 2px solid #eee;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #eee;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #eee;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #eee;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #eee;
+}
 /* a {
     text-decoration: none;
     color: #eee;
